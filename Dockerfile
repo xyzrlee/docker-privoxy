@@ -10,4 +10,4 @@ RUN set -ex \
     && apk upgrade \
     && apk add --no-cache privoxy
 
-ENTRYPOINT [ "privoxy", "--no-daemon" ]
+ENTRYPOINT [ "privoxy", "--no-daemon", "/etc/privoxy/config" ]
